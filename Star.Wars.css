@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-image: url(https://mcdn.wallpapersafari.com/medium/38/0/tNfnSd.png);
+    background-color: black;
+    overflow: hidden;
+    font-family: 'Roboto', Times, serif;
+
+}
+
+img {
+    display: flex;
+    margin: auto;
+    padding: 1rem;
+    justify-content: center;
+    align-content: center;
+
+}
+
+body::after {
+    /* content: ''; */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(180deg, rgba(20, 20, 20, 1)40%, rgba(20, 20, 20, 0)100%);
+}
+
+p {
+    color: #ffe81f;
+}
+
+.wrapper {
+    display: flex;
+    height: 100%;
+    width: 60%;
+    margin: 0 auto;
+    perspective: 450px;
+}
+
+.scroll-effect {
+    color: #ffe81f;
+    font-size: 3vw;
+    font-weight: bold;
+    line-height: 2.0em;
+    text-align: justify;
+    position: relative;
+    animation: scroll 60s linear forwards;
+
+}
+
+h1,
+h2 {
+    font-family: 'Roboto';
+    color: #ffe81f;
+    text-align: center;
+}
+
+@keyframes scroll {
+    from {
+        top: 200px;
+        transform: translateZ(0px) rotateX(20deg);
+    }
+
+    to {
+        top: -7500px;
+        transform: translateZ(-2500px) rotateX(21deg);
+    }
+}
